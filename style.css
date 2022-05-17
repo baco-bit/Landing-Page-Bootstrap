@@ -1,0 +1,189 @@
+/* Encabezado */
+
+.header
+{
+    background-image: url(https://ichef.bbci.co.uk/news/640/cpsprodpb/146BB/production/_102134638_gettyimages-637816996.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.img-logo
+{
+    width: 50px;
+
+}
+
+.header::after
+{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+.vh-50
+{
+    height: 50vmin;
+}
+a:link, a:visited, a:active{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Experience */
+
+
+.card-img-filter
+{
+    filter: brightness(0.5);
+}
+
+.card
+{
+    transition-duration: .6s;
+    clip-path: polygon(
+        50% 0,
+        100% 0,
+        100% 50%,
+        100% 100%,
+        50% 100%,
+        0% 100%,
+        0 50%,
+        0 0%
+        );
+
+}
+
+.card-effect:hover .card
+{
+    clip-path: polygon(
+        50% 0,
+        50% 0,
+        100% 50%,
+        100% 50%,
+        50% 100%,
+        50% 100%,
+        0 50%,
+        0 50%
+        );
+}
+
+.card-img-overlay
+{
+    transition-duration: .6s;
+}
+
+.card-effect:hover .card-img-overlay
+{
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Comentarios */
+
+.comments
+{
+    background-image: url(./img/bg-clients.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.comments.linear-white::after{
+    top: 0;
+}
+.comments__img{
+    --tamaño: 80px;
+    width: var(--tamaño);
+    height: var(--tamaño);
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 7px 7px 7px rgba(0,0,0,0.5);
+    border: 3px ridge white;
+}
+.transform-turn{
+    transform: rotate(.5turn);
+}
+
+.linear-white::after
+{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inspiracion */
+
+.media-object-img{
+    --tamaño: 65px;
+    width: var(--tamaño);
+    height: var(--tamaño);
+    margin-right: 15px;
+}
+.media{
+    display: flex;
+}
+
+
+
+
+
+/* Carrusel */
+
+.carousel-weston-middle
+{
+    top: 35%;
+    color: white;
+    filter: brightness(0.5);
+}
+
+/* Media Queries*/
+
+@media screen and (max-width: 375px){
+    .vh-50
+    {
+        height: 50vmax;
+    }
+}
